@@ -1,0 +1,7 @@
+#ignoruje pliki z rozszerzeniem pyc 
+*.pyc 
+__pycache__
+#ignoruje zmiany w moim środowisku
+django1 
+db.sqlite3
+.DS_Store
