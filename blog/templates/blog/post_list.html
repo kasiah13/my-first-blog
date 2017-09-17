@@ -6,13 +6,18 @@
     	<div>
     		 <h1><a href=""> Blog Hykola</a></h1>
     	</div>
-    	  <div>
-            <p>published: 17.09.2017, 12:14</p>
+    	 <!--  <div>
+           <p>published: 17.09.2017, 12:14</p>
             <h2><a href=""> <font colot ="lime">My first post</a> </font></h2>
             <p><b><font color="aqua">Cześć, wszystkim!</font></b></p>
         	<p>Mam na imię Kasia i właśnie biorę udział w warsztatach  <font color="yellow"><b>DjangoGirls </font></font></b> !</p>
-        </div>
-
-        	
+        </div> -->
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
     </body>
 </html>
